@@ -12,13 +12,13 @@ import com.careerVision.career.model.NewUser;
 import com.careerVision.career.repository.UserDAOImpl;
 
 @RestController
-@RequestMapping(value = "/user")
+@RequestMapping(value = "/updateUser")
 
 public class UserController {
 	@Autowired
 	UserDAOImpl userDAOImpl;
 
-	@PutMapping
+	@PutMapping(value = "/updateUser")
 	public ResponseEntity<Void> updateUser(@RequestBody NewUser user) {
 		try {
 			System.out.println("Inside update user");

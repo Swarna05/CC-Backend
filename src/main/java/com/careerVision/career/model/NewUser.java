@@ -10,7 +10,7 @@ public class NewUser
 	String password;
 	int pincode;
 	String role;
-	int subjectId;
-	int hobbyId;
+	int streamId;
+	//int hobbyId;
 	String grade;
 }

@@ -35,14 +35,34 @@ public class RegisterDAOImpl
         }	
 	}
 	
+//	public void saveAditionalDetails(NewUser newuser) throws Exception  
+//	{
+//		System.out.println("grade"+newuser.getGrade()+"subjectId"+newuser.getSubjectId()+"hobby"+newuser.getHobbyId());
+//		
+//		String query = "Insert into tbl_user_educational_details (contact_no,grade,subject,hobby) VALUES(:contactNo,:grade,:subject,:hobby)";
+//		
+//        SqlParameterSource parameterSource = new MapSqlParameterSource("contactNo", newuser.getContactNo()).addValue("grade", newuser.getGrade())
+//        		.addValue("subject", newuser.getSubjectId()).addValue("hobby", newuser.getHobbyId());
+//
+//        try 
+//        {
+//        	jdbcTemplate.update(query, parameterSource);
+//        } 
+//        catch (DataAccessException e) 
+//        {
+//        	  e.printStackTrace();
+//        }
+//	}
+	
+	
 	public void saveAditionalDetails(NewUser newuser) throws Exception  
 	{
-		System.out.println("grade"+newuser.getGrade()+"subjectId"+newuser.getSubjectId()+"hobby"+newuser.getHobbyId());
+		System.out.println("grade"+newuser.getGrade()+"streamId"+newuser.getStreamId());
 		
-		String query = "Insert into tbl_user_educational_details (contact_no,grade,subject,hobby) VALUES(:contactNo,:grade,:subject,:hobby)";
+		String query = "Insert into tbl_user_edu(contact_no,grade,stream) VALUES(:contactNo,:grade,:stream)";
 		
         SqlParameterSource parameterSource = new MapSqlParameterSource("contactNo", newuser.getContactNo()).addValue("grade", newuser.getGrade())
-        		.addValue("subject", newuser.getSubjectId()).addValue("hobby", newuser.getHobbyId());
+        		.addValue("stream", newuser.getStreamId());
 
         try 
         {

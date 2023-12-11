@@ -20,7 +20,7 @@ public class LogInController
 	@PostMapping(value = "/user")
 	public ResponseEntity<Void> login(@RequestBody User user) {
 		
-		System.out.println("getting the login"+user);
+		System.out.println("getting the login-"+user);
 	    
 		if(0 ==user.getContactNo() || null == user.getPassword()) {
 			return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);

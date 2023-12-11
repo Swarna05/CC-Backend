@@ -23,7 +23,7 @@ public class DashboardController
 		NewUser userAdditionalDetails= dashboarddaoImpl.getUserAdditinalDetails(contactNo);
 		
 		userBasicDetails.setGrade(userAdditionalDetails.getGrade());
-		userBasicDetails.setSubjectId(userAdditionalDetails.getSubjectId());
+		userBasicDetails.setStreamId(userAdditionalDetails.getStreamId());
 		
 		return userBasicDetails;
 	}

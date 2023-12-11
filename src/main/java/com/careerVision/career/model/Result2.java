@@ -3,9 +3,9 @@ package com.careerVision.career.model;
 import lombok.Data;
 
 @Data
-public class Result 
+public class Result2
 {
-	String profession;
-	String course;
+	String suggestions;
+	String suggested_job;
 	
 }

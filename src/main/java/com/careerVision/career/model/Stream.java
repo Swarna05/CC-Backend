@@ -3,9 +3,8 @@ package com.careerVision.career.model;
 import lombok.Data;
 
 @Data
-public class Result 
+public class Stream 
 {
-	String profession;
-	String course;
-	
+	int stream_id;
+	String stream;
 }

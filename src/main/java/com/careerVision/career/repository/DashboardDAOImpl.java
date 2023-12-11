@@ -45,7 +45,7 @@ public class DashboardDAOImpl
 	
 	public NewUser getUserAdditinalDetails(int contactNo) 
 	{	
-		String query = "Select * from tbl_user_educational_details where contact_no = :id";
+		String query = "Select * from tbl_user_edu where contact_no = :id";
 	    SqlParameterSource parameterSource = new MapSqlParameterSource("id",contactNo);
 	    
 	    try 
@@ -57,8 +57,8 @@ public class DashboardDAOImpl
 	            {
 	            	NewUser user = new NewUser();
 	            	user.setGrade(rs.getString("grade"));
-	            	user.setSubjectId(rs.getInt("subject"));
-	            	user.setHobbyId(rs.getInt("hobby")); 
+	            	user.setStreamId(rs.getInt("stream"));
+	            	//user.setHobbyId(rs.getInt("hobby")); 
 	            	
 	            	return user;
 	            }
